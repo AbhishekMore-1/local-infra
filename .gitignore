@@ -1,0 +1,10 @@
+# common files and ide files
+.DS_Store
+.idea/
+.vscode/
+
+# data files
+postgres-data/
+redpanda-data/
+opensearch-data/
+valkey-data/

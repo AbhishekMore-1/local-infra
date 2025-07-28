@@ -1,0 +1,12 @@
+name: local-infra
+services:
+  valkey:
+    image: valkey/valkey:8-alpine
+    volumes:
+      - ./valkey-data:/data
+    container_name: valkey-8-alpine
+    ports:
+      - "6379:6379"
+    # This command disables persistence data storage, should not be used in production
+    command: valkey-server --save "" --appendonly no
+    restart: always
