@@ -8,3 +8,4 @@ postgres-data/
 redpanda-data/
 opensearch-data/
 valkey-data/
+n8n-data/
