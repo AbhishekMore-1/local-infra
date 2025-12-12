@@ -12,11 +12,11 @@ evaluate:
     @just --evaluate
 
 # Make specified infra up
-up INFRA:
-    @cd {{INFRA}} && docker-compose -f dc.yaml up -d
+up INFRA VARIANT = "default":
+    @cd {{INFRA}} && docker-compose -f {{VARIANT}}_dc.yaml up -d
     @echo "{{INFRA}} is up"
 
 # Make specified infra down
-down INFRA:
-    @cd {{INFRA}} && docker-compose -f dc.yaml down
+down INFRA VARIANT = "default":
+    @cd {{INFRA}} && docker-compose -f {{VARIANT}}_dc.yaml down
     @echo "{{INFRA}} is down"

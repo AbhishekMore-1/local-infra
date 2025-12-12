@@ -1,6 +1,6 @@
-name: local-infra
+name: redpanda
 services:
-  redpanda-0:
+  app-1:
     command:
       - redpanda
       - start
@@ -54,4 +54,4 @@ services:
       - 8080:8080
     restart: always
     depends_on:
-      - redpanda-0
+      - app-1

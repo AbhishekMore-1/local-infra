@@ -1,11 +1,13 @@
-name: local-infra
+name: postgres
 services:
-  postgresql:
+  app-1:
     container_name: postgres-17-alpine
     environment:
       POSTGRES_PASSWORD: postgres
       POSTGRES_USER: postgres
-    image: postgres:17-alpine
+    build:
+      context: .
+      dockerfile: pg_partman.Dockerfile
     ports:
       - "5432:5432"
     volumes:

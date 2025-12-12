@@ -1,6 +1,6 @@
-name: local-infra
+name: valkey
 services:
-  valkey:
+  app-1:
     image: valkey/valkey:8-alpine
     volumes:
       - ./valkey-data:/data
