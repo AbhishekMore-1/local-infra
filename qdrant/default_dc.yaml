@@ -1,0 +1,10 @@
+name: qdrant
+services:
+  app-1:
+    container_name: qdrant-v1.17
+    image: qdrant/qdrant:v1.17
+    ports:
+      - "6333:6333"
+    volumes:
+      - ./app_data:/qdrant/storage
+    restart: always
