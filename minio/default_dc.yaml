@@ -1,0 +1,15 @@
+name: minio
+services:
+  app-1:
+    image: minio/minio:latest
+    container_name: minio-latest
+    ports:
+      - "8000:8000"   # S3 API
+      - "8001:8001"   # Web console
+    environment:
+      MINIO_ROOT_USER: test
+      MINIO_ROOT_PASSWORD: testtest
+    command: server /data --address ":8000" --console-address ":8001"
+    volumes:
+      - ./app_data:/data
+    restart: always
