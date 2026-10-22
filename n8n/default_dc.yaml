@@ -18,6 +18,7 @@ services:
       interval: 5s
       timeout: 5s
       retries: 10
+    restart: unless-stopped
 
   n8n:
     container_name: n8n-server
@@ -38,6 +39,7 @@ services:
     depends_on:
       postgresql:
         condition: service_healthy
+    restart: unless-stopped
 
 networks:
   n8n-network:

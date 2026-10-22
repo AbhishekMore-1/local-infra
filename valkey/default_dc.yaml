@@ -9,4 +9,4 @@ services:
       - "6379:6379"
     # This command disables persistence data storage, should not be used in production
     command: valkey-server --save "" --appendonly no
-    restart: always
+    restart: unless-stopped

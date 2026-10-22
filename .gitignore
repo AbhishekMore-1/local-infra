@@ -10,3 +10,5 @@ opensearch-data/
 valkey-data/
 n8n-data/
 app_data/
+clickhouse-data/
+clickhouse-logs/

@@ -7,4 +7,4 @@ services:
       - "6333:6333"
     volumes:
       - ./app_data:/qdrant/storage
-    restart: always
+    restart: unless-stopped

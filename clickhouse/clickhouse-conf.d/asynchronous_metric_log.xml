@@ -1,0 +1,7 @@
+<clickhouse>
+    <asynchronous_metric_log>
+        <database>system</database>
+        <table>asynchronous_metric_log</table>
+        <ttl>event_date + INTERVAL 2 DAY DELETE</ttl>
+    </asynchronous_metric_log>
+</clickhouse>

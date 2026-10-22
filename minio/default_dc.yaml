@@ -12,4 +12,4 @@ services:
     command: server /data --address ":8000" --console-address ":8001"
     volumes:
       - ./app_data:/data
-    restart: always
+    restart: unless-stopped

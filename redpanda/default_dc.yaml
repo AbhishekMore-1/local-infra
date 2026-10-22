@@ -32,7 +32,7 @@ services:
       - 18082:18082
       - 19092:19092
       - 19644:9644
-    restart: always
+    restart: unless-stopped
   console:
     container_name: redpanda-console
     image: docker.redpanda.com/redpandadata/console:v3.1.3
@@ -52,6 +52,6 @@ services:
             urls: ["http://redpanda-0:9644"]
     ports:
       - 8080:8080
-    restart: always
     depends_on:
       - app-1
+    restart: unless-stopped

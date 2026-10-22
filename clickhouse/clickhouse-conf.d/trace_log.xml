@@ -1,0 +1,7 @@
+<clickhouse>
+    <trace_log>
+        <database>system</database>
+        <table>trace_log</table>
+        <ttl>event_date + INTERVAL 2 DAY DELETE</ttl>
+    </trace_log>
+</clickhouse>
