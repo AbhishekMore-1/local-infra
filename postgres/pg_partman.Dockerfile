@@ -2,7 +2,7 @@ FROM postgres:17-alpine AS builder
 # Install dependencies
 RUN /bin/sh -c set -ex \
     && apk upgrade --no-cache \
-    && apk add --no-cache ca-certificates tar make gcc clang19 llvm19
+    && apk add --no-cache ca-certificates tar make gcc $DOCKER_PG_LLVM_DEPS
 # Install pg_partman
 ENV PG_PARTMAN_VERSION=v5.2.4
 RUN /bin/sh -c set -ex \
