@@ -10,7 +10,7 @@ services:
     container_name: clickhouse-26-alpine
     ports:
       - "8123:8123"
-      - "9000:9000"
+      - "19000:9000" # host 9000 is held by ZscalerTunnel on 127.0.0.1
     environment:
       - CLICKHOUSE_DB=default
       - CLICKHOUSE_USER=default

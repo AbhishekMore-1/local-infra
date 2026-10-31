@@ -12,3 +12,5 @@ n8n-data/
 app_data/
 clickhouse-data/
 clickhouse-logs/
+# machine-local certs (see README)
+.certs/
